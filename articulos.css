@@ -1,0 +1,189 @@
+:root {
+    --color-fondo: #05060B;
+    --color-secundario: #101827;
+    --color-tarjeta: #111827;
+    --color-primario: #38BDF8;
+    --color-acento: #2563EB;
+    --color-texto: #F9FAFB;
+    --color-texto-secundario: #CBD5E1;
+    --color-borde: #24324A;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+}
+
+/* Encabezado */
+header {
+    background: var(--color-secundario);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--color-texto-secundario);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Menú de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--color-acento);
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* Título de la sección */
+main section > h2 {
+    color: var(--color-primario);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas de artículos */
+article {
+    background: var(--color-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-left: 4px solid var(--color-primario);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+article:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primario);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.10);
+}
+
+/* Títulos de los artículos */
+article h3 {
+    color: var(--color-primario);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+/* Párrafos de los artículos */
+article p {
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+article p:last-child {
+    margin-bottom: 0;
+}
+
+/* Pie de página */
+footer {
+    background: var(--color-secundario);
+    border-top: 1px solid var(--color-borde);
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 50px;
+}
+
+footer p {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Diseño adaptable a celulares y tabletas */
+@media (max-width: 700px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    main section > h2 {
+        font-size: 1.7rem;
+    }
+
+    article {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    article h3 {
+        font-size: 1.2rem;
+    }
+
+    article p {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}

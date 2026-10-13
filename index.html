@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Página de inicio del sitio web personal de Kevin Santiago Cárdenas Caro.">
-    <meta name="keywords" content="Kevin Cárdenas, programación, desarrollo de software, HTML">
+    <meta name="description" content="Página personal de Kevin Santiago Cárdenas Caro.">
+    <meta name="keywords" content="programación, HTML, CSS, Java">
     <meta name="author" content="Kevin Santiago Cárdenas Caro">
 
-    <title>Inicio - Kevin Santiago Cárdenas Caro</title>
+    <title>Inicio - Kevin Cárdenas</title>
+
+    <!-- Tipo de letra -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Conectar CSS -->
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -25,6 +31,7 @@
             <a href="articulos.html">Artículos</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
     </header>
 
     <main>
@@ -45,8 +52,9 @@
 
             <p>
                 Mi nombre es Kevin Santiago Cárdenas Caro.
-                Soy estudiante de Análisis y Desarrollo de Software
-                y me interesa aprender sobre programación y desarrollo web.
+                Soy técnico en sistemas y estudiante de Análisis
+                y Desarrollo de Software en el SENA.
+                Me interesa aprender programación y desarrollo web.
             </p>
         </section>
 
@@ -55,11 +63,28 @@
 
             <ul>
                 <li>HTML</li>
-                <li>Programación</li>
+                <li>CSS</li>
                 <li>Java</li>
                 <li>Git y GitHub</li>
                 <li>Desarrollo web</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>
 
     </main>
